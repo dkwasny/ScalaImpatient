@@ -2,14 +2,23 @@ package net.kwas.impatient.ch2
 object Exercises extends App {
   import math.pow
 
+  // --- Exercise 1
+  
   def signum(x: Int) = { if (x > 0) 1 else if (x < 0) -1 else 0 }
   val sigs = for (i <- -3 to 3) yield signum(i)
   println(s"Sigs: ${sigs}")
 
+  // --- Exercise 2
+  // Its type is Unit  
+
+  // --- Exercise 3
+  
   var y = -1
   val x = y = 1
   println(s"Unit: ${x}")
 
+  // --- Exercise 4
+  
   println("For Loop:")
   for (i <- 10 to 0 by -1) {
     print(i)
@@ -20,6 +29,8 @@ object Exercises extends App {
   (10 to 0 by -1).foreach(print)
   println
 
+  // --- Exercise 5
+  
   def countdown(x: Int) {
     for (i <- x to 0 by -1) {
       print(i + " ")
@@ -30,6 +41,8 @@ object Exercises extends App {
   val unit = countdown(10)
   println(s"Return Type of Countdown: ${unit}")
 
+  // --- Exercise 6 & 8
+  
   def product(input: String) = {
     var retVal = 1
     for (x <- input) {
@@ -41,10 +54,14 @@ object Exercises extends App {
   val helloProduct = product("Hello")
   println(s"Hello Product: ${helloProduct}")
 
+  // --- Exercise 7
+  
   // Without mapping to Ints the multiplication happens as chars, which overflows
   val easyProduct = "Hello".map(Char.char2int).product
   println(s"Easy Product: ${easyProduct}")
 
+  // --- Exercise 9
+  
   def recursiveProduct(input: String): Int = {
     if (input.isEmpty) {
       1
@@ -56,6 +73,8 @@ object Exercises extends App {
   val helloRecursiveProduct = recursiveProduct("Hello")
   println(s"Recursive Product: ${helloRecursiveProduct}")
 
+  // --- Exercise 10
+  
   def exponent(x: Int, n: Int): Double = {
     if (n == 0) {
       1
