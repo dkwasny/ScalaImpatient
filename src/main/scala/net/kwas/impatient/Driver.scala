@@ -6,7 +6,8 @@ object Driver extends App {
   val apps = List(
     ch1.Exercises,
     ch2.Exercises,
-    ch3.Exercises
+    ch3.Exercises,
+    ch4.Exercises
   )
   
   for (app <- apps) {
