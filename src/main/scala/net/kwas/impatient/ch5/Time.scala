@@ -1,12 +1,6 @@
 package net.kwas.impatient.ch5
 
-class Time {
-  private var hours_ = 0
-  private var minutes_ = 0
-
-  def hours = hours_
-  def minutes = minutes_
-
+class Time(val hours: Int, val minutes: Int) {
   def before(other: Time): Boolean = {
     (hours < other.hours) || (hours == other.hours && minutes < other.minutes)
   }
