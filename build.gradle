@@ -9,16 +9,10 @@ dependencies {
 	testCompile "org.scalatest:scalatest_2.11:3.0.0"
 }
 
-task run(type: JavaExec, dependsOn: "build") {
-	classpath = sourceSets.main.runtimeClasspath
-	main = "net.kwas.impatient.Driver"
-}
-
 task scalaTest(type: JavaExec, dependsOn: ["classes", "testClasses"]) {
 	classpath = sourceSets.test.runtimeClasspath
 	main = "org.scalatest.tools.Runner"
 	args = ["-o", "-R", sourceSets.test.output.classesDir.getAbsolutePath()]
 }
-
 test.dependsOn(scalaTest)
 
