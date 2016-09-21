@@ -7,7 +7,8 @@ object Driver extends App {
     ch1.Exercises,
     ch2.Exercises,
     ch3.Exercises,
-    ch4.Exercises
+    ch4.Exercises,
+    ch5.Exercises
   )
   
   for (app <- apps) {
